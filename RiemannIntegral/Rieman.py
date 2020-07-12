@@ -3,7 +3,7 @@
 from manimlib.imports import *
 import numpy as np
 
-class FTC(GraphScene):
+class RiemannIntegral(GraphScene):
     CONFIG = {
         "x_max": 6,
         "x_min": -2,
