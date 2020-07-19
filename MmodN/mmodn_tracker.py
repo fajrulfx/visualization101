@@ -29,14 +29,14 @@ class MmodNTracker(Scene):
                 unit=None, 
             )
         decimal.scale(2)
-        decimal.next_to(fungsi,RIGHT,buff=0)
+        decimal.next_to(ftext,RIGHT,buff=0)
         decimal.add_updater(lambda d: d.set_value(mod_tracker.get_value()))
 
         closetext = TexMobject("\\, ,400)")
         closetext.scale(2)
         closetext.add_updater(lambda m: m.next_to(decimal,RIGHT,buff=SMALL_BUFF))
 
-        self.play(FadeIn(circle),FadeIn(lines),FadeIn(fungsi),FadeIn(decimal),FadeIn(akhir))
+        self.play(FadeIn(circle),FadeIn(lines),FadeIn(ftext),FadeIn(decimal),FadeIn(akhir))
         self.play(
             mod_tracker.set_value,self.end_value,
             rate_func=linear,
